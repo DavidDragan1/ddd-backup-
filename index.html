@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>David Dragan Digital</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arizonia">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Elsie+Swash+Caps">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body,h2,h3,h4,h5,h6 {font-family: "Times New Roman", Times, serif;}
+body, html {
+  height: 100%;
+  color: black;
+  line-height: 1.8;
+}
+
+h1 {
+  font-family: "Elsie Swash Caps";
+  font-weight:400;
+  }
+
+/* Title */
+.title{
+  font-family: "Arizonia";
+  font-size: 150px;
+  color: #F0E68C;
+  text-align: center;
+}
+
+/* Offset Subtitle */
+.subtitle{
+  font-family: "Arizonia";
+  font-size: 40px;
+  color: #F0E68C;
+  position: absolute;
+  bottom: -5px;
+  right: -30%;
+}
+
+/* Offset CTA Button */
+.CTA{
+  font-size: 30px;
+  color: #F0E68C;
+  position: relative;
+  background-color: black;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('images/pexels-min-an-698554.jpg');
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("images/pexels-ylanite-koppens-810050.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("images/pexels-pixabay-209695.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+
+/* The navigation bar */
+.navbar {
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+/* Main content */
+.main { margin-top: 30px;}/* Add a top margin to avoid content overlay */
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+.textlink:link { color: floralwhite;}
+.textlink:hover { text-decoration: underline;}
+
+ul { list-style-type: none;}
+
+.fullheight{ height: 100%;}
+
+.hrblack {
+  color: black;
+  background: black;
+  background-color: black;
+}
+
+/* CSS FOR CAROUSEL TEXT */
+
+
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div>
+	  <div class="navbar navbar-inverse" id="myNavbar">
+	    
+		<a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+		  <i class="fa fa-bars"></i>
+		</a>
+		<inline-block>
+          <a href="#home" class="w3-bar-item w3-button w3-hide-small" style="font-family: Arizonia;">D.D.Digital</a>
+        
+		  <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> About</a>
+		  <a href="#services" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-bell"></i> Services</a>
+		  <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Portfolio</a>
+		  <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> Contact</a>
+		</inline-block>
+	  </div>
+
+	  <!-- Navbar on small screens -->
+	  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+		<a href="#about" onclick="toggleFunction()">About</a>
+		<a href="#portfolio" onclick="toggleFunction()">Portfolio</a>
+		<a href="#contact" onclick="toggleFunction()">Contact</a>
+	  </div>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container " id="home">
+  <div class="w3-display-container w3-display-middle w3-hide-small">
+    <div class="title">D.D.Digital</div>
+    <div class="subtitle">...Changing the w.w.web</div>
+  </div>
+  <a class="w3-button w3-black w3-hide-small" style="font-size: 25px; position: absolute; right: 20%; bottom: 15%" href="#portfolio">See Portfolio</a>
+  <button class="w3-button " style="background: rgba(0,0,0,0); color: white; font-size: 50px; position: absolute; right: 0%; bottom: 0%"><a href="#contact">&#8671;</a></button>
+</div>
+
+
+<!-- Container (About Section) -->
+<div class="w3-row w3-center w3-padding-16 fullheight" style="background-color: black; color: floralwhite" id="about">
+  <div class="w3-content">
+	  <div class="w3-content w3-container w3-padding-64">
+		<h1 class="w3-center">About Me</h1>
+		<hr>
+		  <blockquote class="w3-panel w3-leftbar" style="background: antiquewhite; color: black;">
+		    <p class="w3-center"><em>"I help businesses develop a leading edge over their competitors by building smooth, down-to-business, user-first websites and <a class="textlink" href="#">other electronic articles</a> that continue to drive results."</em></p>
+	      </blockquote>
+	  </div>
+	  <div class="w3-third w3-section">
+		<span class="w3-xlarge">Who?</span>
+		  <div style="padding-left: 5%; padding-right: 5%; text-align: justify; text-justify: inter-word;">
+			<p>I’m David, a freelance web designer, developer, and lifetime student.</p>
+			<p>I'm a one man team, and unlike the big agencies, I devote all my time and attention to one project at a time. 
+			This way I can work closer with clients and provide a level of attention to detail and nuance that the big agencies can't.
+			</p>
+		  </div>
+	  </div>
+	  <div class="w3-third w3-section">
+		<span class="w3-xlarge">What?</span>
+		  <div style="padding-left: 5%; padding-right: 5%; text-align: justify; text-justify: inter-word;">
+			<p>As a freelance web designer and developer, I aim to make a meaningful contribution to human technology by continuously learning, growing, and solving real-world problems to help drive positive change.</p>
+			<p>I work closely with clients to make sure that every detail works for them.</p>
+		  </div>
+	  </div>
+	  <div class="w3-third w3-section">
+		<span class="w3-xlarge">Why?</span>
+		<div style="padding-left: 5%; padding-right: 5%; text-align: justify; text-justify: inter-word;">
+		  <p class="has-text-align-left"><strong>Why web design?</strong> - Because ever since I was young I have wanted to work in a field that demands both creativity and a logical approach to make an impact.</p>
+		  <p><strong>Why me?</strong> - Because I bring a unique blend of creative influence and technical proficiency to every project; </p>
+		</div>
+	  </div>
+	  <div class="w3-center">
+	    <p class="w3-large w3-center" style="text-decoration: underline; color: floralwhite; line-height:250px">I strive to out-do myself every time.</p>
+	  </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div style="background-color: floralwhite; color: black;">
+	<div class="w3-content w3-container w3-padding-64" id="services">
+      <h1 class="w3-center">What I Can Offer</h1>
+	  <hr class="hrblack">
+	  
+	  <blockquote class="w3-panel w3-leftbar w3-light-gray">
+		<p class="w3-center"><em>“In the information age, build a website before you build a workplace.” – Amit Kalantri.</em></p>
+	  </blockquote> 
+	  <p style="text-align: justify">Establishing a strong online presence through a website is of paramount importance to achieving success. A website serves as a virtual storefront, enabling businesses to reach a global audience 24/7. A website also provides vital information, showcases products or services, and fosters engagement with customers. Moreover, it allows for seamless transactions and bookings, creating convenience and growth. While physical workplaces are still essential for many businesses, an impactful website acts as the foundation, connecting businesses with their target market, and making them stand out from the crowd.
+	  </p>
+<!-- Text Carousel Outlined -->	  
+  
+	  <p class="w3-center w3-xlarge">Whether you need...</p>
+	  
+	  <div id="carouselstext" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner w3-center w3-xlarge">
+			<div class="carousel-item active">
+			  <p class="d-block w-100">A Website</p>
+			</div>
+			<div class="carousel-item">
+			  <p class="d-block w-100">A Landing Page</p>
+			</div>
+			<div class="carousel-item">
+			  <p class="d-block w-100">A Digital Business Card</p>
+			</div>
+			<div class="carousel-item">
+			  <p class="d-block w-100">SEO & Site Speed Optimisation</p>
+			</div>
+			<div class="carousel-item">
+			  <p class="d-block w-100">Graphics (Logos, Ads, Flyers, etc.)</p>
+			</div>
+			<div class="carousel-item">
+			  <p class="d-block w-100">E-mail/Social Media Marketing</p>
+			</div>
+			<div class="carousel-item">
+			  <p class="d-block w-100">An EPOS Till System</p>
+			</div>
+			<div class="carousel-item">
+			  <p class="d-block w-100">Hardware Installation</p>
+			</div>
+			<div class="carousel-item">
+			  <p class="d-block w-100">Troubleshooting & Servicing</p>
+			</div>
+			<div class="carousel-item">
+			  <p class="d-block w-100">Performance & Security Audit</p>
+			</div>
+			<div class="carousel-item">
+			  <p class="d-block w-100">Anyhting Else I.T. Related</p>
+			</div>
+		</div>
+	  </div>
+	  <p class="w3-center w3-xlarge">...I can help!</p>
+  
+	<div class="w3-container">
+	  <h2>My Most Popular Services</h2>
+	</div>
+<!-- Services -->
+	<div class="w3-row-padding">
+
+		<div class="w3-third w3-margin-bottom">
+		  <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+			<li class="w3-black w3-xlarge w3-padding-32">Landing Page</li>
+			<li class="w3-padding-16" style="text-align: center">Single page that allows you to have all your links in one place while also establishing a point of contact for your potential clients.</li>
+			<li class="w3-padding-16"><b>Free</b> Custom Domain Intergration</li>
+			<li class="w3-padding-16"><b>Free</b> Lifetime Web Hosting</li>
+			<li class="w3-padding-16"><b>X</b> Revisions</li>
+			<li class="w3-padding-16">
+			  <span class="w3-opacity">Starting from</span>
+			  <h2 class="w3-wide">£39.99</h2>
+			</li>
+			<li class="w3-black w3-padding-24">
+			  <a class="w3-button w3-padding-large" style="background: khaki; color: black" href="https://linkr.bio/ettoreriva" target="_blank" rel="noopener noreferrer" >See Example</a>
+			</li>
+		  </ul>
+		</div>
+
+		<div class="w3-third w3-margin-bottom">
+		  <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+			<li class="w3-black w3-xlarge w3-padding-32" >Template Website</li>
+			<li class="w3-padding-16" style="text-align: center">Simple, clean, single-page multi-section website that tells your users everything they need to know and gives them a place to contact you.<br> With this package, your content is added to an existing template of your choice.</li>
+			<li class="w3-padding-16"><b>Free</b> Custom Domain Intergration</li>
+			<li class="w3-padding-16"><b>Free</b> Lifetime Web Hosting</li>
+			<li class="w3-padding-16"><b>1 Free</b> Revision</li>
+			<li class="w3-padding-16">
+			  <span class="w3-opacity">Starting from</span><br>
+			  <h2 class="w3-wide w3-text-red">£124.99</h2>
+			</li>
+			<li class="w3-black w3-padding-24">
+			  <button class="w3-button w3-padding-large" style="background: khaki; color: black">See Templates</button>
+			</li>
+		  </ul>
+		</div>
+
+		<div class="w3-third w3-margin-bottom">
+		  <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+			<li class="w3-black w3-xlarge w3-padding-32">Custom Website</li>
+			<li class="w3-padding-16">Completely original, custom-made website to suit your specific needs. <br>This package includes an initial mock design to facilitate any last-minute design changes and ensure the end product is exactly to your specification.</li>
+			<li class="w3-padding-16"><b>Free</b> Custom Domain Intergration</li>
+			<li class="w3-padding-16"><b>Free</b> Lifetime Web Hosting</li>
+			<li class="w3-padding-16"><b>Unlimited</b> Pages</li>
+			<li class="w3-padding-16"><b>Custom Logo</b></li>
+			<li class="w3-padding-16"><b>2 Free</b> Revisions</li>
+			<li class="w3-padding-16">
+			  <span class="w3-opacity">Starting from</span>
+			  <h2 class="w3-wide">£349.99</h2>
+			</li>
+			<li class="w3-black w3-padding-24">
+			  <a class="w3-button w3-padding-large" style="background: khaki; color: black" href="#contact">Contact Now</a>
+			</li>
+		  </ul>
+		</div>
+		
+	  </div>
+	</div>
+</div>
+
+
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-text-white w3-wide h1">Portfolio</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-black">
+  <div class="w3-content w3-container w3-padding-64" id="portfolio">
+	<h3 class="w3-center">Examples</h3>
+	<p class="w3-center"><em>Here are you can see some examples of what I can do for you.<br> Please find and click on your category on the left, then click on a specific item to go to the respective website. Links open in a new tab.</em></p><br>
+
+
+	<a class="nav-link active" id="v-tabs-home-tab" data-mdb-toggle="tab" href="#v-tabs-home" role="tab" aria-controls="v-tabs-home" aria-selected="true"></a>
+<!-- Portfolio Tabs -->
+	<div class="row w-100">
+	    <div class="col-3">
+		<!-- Tab navs -->
+			<div class="nav flex-column nav-tabs text-center" id="v-tabs-tab" role="tablist" aria-orientation="vertical">
+				<ul class="nav nav-tabs">
+					<li><a data-toggle="tab" href="#lptab">Landing Pages</a></li>
+					<li><a data-toggle="tab" href="#dbctab">Digital Business Cards</a></li>
+					<li><a data-toggle="tab" href="#cvtab">CVs & Portfolios</a></li>
+					<li><a data-toggle="tab" href="#twtab">Template Websites</a></li>
+					<li><a data-toggle="tab" href="#cwtab">Custom Websites</a></li>
+					<li><a data-toggle="tab" href="#detab">Digital Ecosystem</a></li>
+					<li><a data-toggle="tab" href="#seotab">SEO, Performance & Security</a></li>
+					<li class="active"><a data-toggle="tab" href="#nhtab">I Need Help Deciding</a></li>
+				</ul>
+			</div>
+		</div>
+	
+		<div class="col-9">
+		<!-- Tab content -->
+		  <div class="tab-content" id="v-tabs-tabContent">
+			<div id="lptab" class="tab-pane fade" role="tabpanel" aria-labelledby="vertical-tabs-landing-page-tab">
+			  <h3>Landing Pages</h3>
+			  <p>A landing page is the minimum requirement for building an online presence.<br> Many startups choose to get a landing page out there to test the waters before comitting to a full-fledged website.</p>
+			  <p>Examples:</p>
+			  <p>Clean Minimal: <a href="https://cremaypomadastudio.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Crema y Pomada</a></p>
+			  <p>Free Quote & Contact Form: <a href="https://www.forefrontgardenrooms.co/free-quote?_atid=UCLr4qQnXyz4CS2XhbLtxegPw6kj9M" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Forefront Garden Rooms</a></p>
+			</div>
+			<div id="dbctab" class="tab-pane fade" role="tabpanel" aria-labelledby="vertical-tabs-digital-business-card-tab">
+			  <h3>Digital Business Cards</h3>
+			  <p>A Digital Business Card (DBC) is a type of landing page that provides links to all your other platforms, and sometimes a contact form.</p>
+			  <p>Examples:</p>
+			  <a href="https://linkr.bio/ettoreriva" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Ettore Riva's DBC.</a>
+			</div>
+			<div id="cvtab" class="tab-pane fade" role="tabpanel" aria-labelledby="vertical-tabs-cv-tab">
+			  <h3>CVs & Portfolios</h3>
+			  <p>Every creative, whether prolific or yet undiscovered, has encountered the process of building a CV or portfolio that truly speaks their language.</p>
+			  <p>Investing in an online CV or portfolio can allow creatives and freelancers to appear more professional and thus have their message heard.</p>
+			  <p>Examples:</p>
+			  <a href="https://charliepite.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Charlie Pite.</a>
+			  <a href="https://jordanhughes.co/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Jordan Hughes.</a>
+			  <a href="https://www.johngreenbooks.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">John Green.</a>
+			  <a href="https://joshkaufman.net/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Josh Kaufman.</a>
+			</div>
+			<div id="twtab" class="tab-pane fade" role="tabpanel" aria-labelledby="vertical-tabs-template-website-tab">
+			  <h3>Template Websites</h3>
+			  <p>The design and development process for a completely customised website is highly demanding and time consuming, which is reflected in the price.</p>
+			  <p>Following an existing, tried and tested template layout ensures accessibility and responsiveness on all devices, as well as faster and more economical production.</p>
+			  <p>Examples:</p>
+			  <p>Businesses: <br>
+			    <a href="https://www.w3schools.com/w3css/tryw3css_templates_cafe.htm" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Rustic Cafe.</a>
+			    <a href="https://www.w3schools.com/w3css/tryw3css_templates_gourmet_catering.htm" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Modern Catering Company.</a>
+				<a href="https://www.w3schools.com/w3css/tryw3css_templates_architect.htm" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Architecture Firm.</a>
+				<a href="https://www.w3schools.com/w3css/tryw3css_templates_startup.htm" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Sleek Startup.</a>
+				<a href="https://www.w3schools.com/w3css/tryw3css_templates_restaurant_modal.htm" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Minimal Restaurant.</a>
+				<a href="https://www.w3schools.com/w3css/tryw3css_templates_interior_design.htm" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Interior Design.</a>
+				<a href="https://www.w3schools.com/w3css/tryw3css_templates_parallax.htm" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Freelancer/Solotrepreneur.</a>
+				<a href="https://www.w3schools.com/w3css/tryw3css_templates_pizza.htm" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Pizza.</a>
+			  </p>
+			  <p>Portfolios:<br>
+			    <a href="https://www.w3schools.com/w3css/tryw3css_templates_cv.htm" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">E-CV.</a>
+			    <a href="https://www.w3schools.com/w3css/tryw3css_templates_photo3.htm" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Old-School Photographer.</a>
+			    <a href="https://www.w3schools.com/w3css/tryw3css_templates_portfolio3.htm" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Modern Photographer.</a>
+			    <a href="https://www.w3schools.com/w3css/tryw3css_templates_dark_portfolio.htm" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Striking Dark Theme.</a>
+				<a href="https://www.w3schools.com/w3css/tryw3css_templates_bw_portfolio.htm" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Black & White.</a>
+				<a href="https://www.w3schools.com/w3css/tryw3css_templates_streetart.htm" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Street Art.</a>
+			  </p>
+			  <p>Other:<br>
+			    <a href="https://www.w3schools.com/w3css/tryw3css_templates_band.htm" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Band.</a>
+			    <a href="https://www.w3schools.com/w3css/tryw3css_templates_wedding.htm" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Wedding.</a>
+			  </p>
+			</div>
+			<div id="cwtab" class="tab-pane fade" role="tabpanel" aria-labelledby="vertical-tabs-custom-website-tab">
+			  <h3>Custom Websites</h3>
+			  <p>Most successful websites follow a similar structure. Some (usually unsuccessful) websites follow no structure at all.
+			  The first can result in a generic, boring website, and the latter results in the user just leaving out of confusion.</p>
+			  <p>A custom, completely original website will give your users a deeper understanding and apreciation of your branding and mission, and is the first step towards building a digital ecosystem that keeps people coming back.</p>
+			  <p>Examples:</p>
+			  <p>One Page Minimal: <a href="https://lightforecast.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Light Forecast Website.</a></p>
+			  <p>One Page Eclectic: <a href="https://thevisual.team/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">The Visual Team.</a></p>
+			  <p>Multi-Page Minimal: <a href="https://garyvaynerchuk.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Gary Vaynerchuk.</a></p>
+			  <p>Multi-Page Eclectic: <a href="https://simplychocolatecph.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline">Simply Chocolate.</a></p>
+			</div>
+			<div id="detab" class="tab-pane fade" role="tabpanel" aria-labelledby="vertical-tabs-digital-ecosystem-tab">
+			  <h3>Digital Ecosystem</h3>
+			  <p>I can help you build a digital ecosystem; a beautiful, all-inclusive digital presence that is coherent and compelling across all platforms, and helps you tell your story like never before.</p>
+			  <p>The biggest thing all successful businesses, entrepreneurs, and personalities have in common is that they have a solid ecosystem: one that keeps you in a loop of coming back for more again and again.</p>
+			  <p>A Digital Ecosystem can include, but is not limited to: a website, multiple landing pages for different audiences, custom graphics, marketing campaigns, online advertising, an app, blog, social media automation.</p>
+			  <p>Interested? - <a href="#contact" style="text-decoration: underline">Get in touch</a></p>
+			</div>
+			<div id="seotab" class="tab-pane fade" role="tabpanel" aria-labelledby="vertical-tabs-seo-tab">
+			  <h3>SEO, Performance & Security</h3>
+			  <p>Is your existing website running slowly or not getting the results you hoped?<br>
+			  I can audit your your site's performance and security and provide clear reports and areas for improvement.
+			  Aditionally, I can fix these issues and optimise the site for better search engine rankings. 
+			  </p><a href="#contact" style="text-decoration: underline">Contact Me</a></p>
+			  <p>
+			</div>
+			<div id="nhtab" class="tab-pane fade show active" role="tabpanel" aria-labelledby="vertical-tabs-need-help-tab">
+			  <h3>Not sure what type of website you need?</h3>
+			  <p>Contact me and tell me about your needs and I'll be sure to find the best product in my offering for you.</p>
+			  <p><a href="#contact" style="text-decoration: underline">Contact Form.</a></p>
+			</div>
+		  </div>
+		</div>
+	</div>
+  </div>
+</div>
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-text-white w3-wide h1">Contact Me</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+	    <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: daviddragan377@gmail.com<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +447735668270<br>
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> London, UK<br>
+      </div>
+	  
+      <p>Send me a quick message and I'll get back to you as soon as possible.</p>
+<!-- Contact form -->
+      <form class="jotform-form" action="https://eu-submit.jotform.com/submit/231623814448356" method="post" name="form_231623814448356" id="231623814448356" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="231623814448356" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" />
+		<div role="main" class="form-all">
+		<ul class="form-section page-section">
+		  <li class="form-line jf-required" data-type="control_textbox" id="id_8"><label class="form-label form-label-top form-label-auto" id="label_8" for="input_8"> Name<span class="form-required">*</span> </label>
+			<div id="cid_8" class="form-input-wide jf-required"> <input type="text" id="input_8" name="q8_name" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" size="25" value="" placeholder=" " data-component="textbox" aria-labelledby="label_8" required="" /> </div>
+		  </li>
+		  <li class="form-line jf-required" data-type="control_email" id="id_7"><label class="form-label form-label-top form-label-auto" id="label_7" for="input_7"> E-mail<span class="form-required">*</span> </label>
+			<div id="cid_7" class="form-input-wide jf-required"> <input type="email" id="input_7" name="q7_email" class="form-textbox validate[required, Email]" data-defaultvalue="" size="25" value="" placeholder=" " data-component="email" aria-labelledby="label_7" required="" /> </div>
+		  </li>
+		  <li class="form-line jf-required" data-type="control_textarea" id="id_4"><label class="form-label form-label-top form-label-auto" id="label_4" for="input_4"> Message<span class="form-required">*</span> </label>
+			<div id="cid_4" class="form-input-wide jf-required"> <textarea id="input_4" class="form-textarea validate[required]" name="q4_message4" cols="28" rows="6" data-component="textarea" required="" aria-labelledby="label_4"></textarea> </div>
+		  </li>
+		  <li class="form-line" data-type="control_button" id="id_2">
+			<div id="cid_2" class="form-input-wide">
+			  <div data-align="center" class="form-buttons-wrapper form-buttons-center   jsTest-button-wrapperField"><button id="input_2" type="submit" class="form-submit-button form-submit-button-none submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">SUBMIT</button></div>
+			</div>
+		  </li>
+		  <li style="display:none">Should be Empty: <input type="text" name="website" value="" /></li>
+		</ul>
+		</div>
+	  </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Take me to the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <a href="https://www.linkedin.com/in/david-dragan-292a281b5/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+  </div>
+  <p>Copyright © 2023 - <a href="https://daviddragan1.github.io/me/index.html" title="David Dragan Digital" target="_blank" class="w3-hover-text-blue w3-hover-text-underline">David Dragan Digital</a>.</p>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+$('.carousel').carousel({
+  interval: 2000
+})
+
+
+</script>
+
+</body>
+</html>
